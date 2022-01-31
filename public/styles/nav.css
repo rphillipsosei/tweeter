@@ -1,0 +1,17 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4056A1;
+    font-family: "Bungee"
+    color: #ffffff;
+    position: fixed;
+    left: 0;
+    z-index: 2;
+    padding: 0 1.5em;
+    width: 100vw;
+    height: 120px;
+    position: static; 
+    top: 0; 
+    width: 100%;
+    } 
