@@ -21,6 +21,16 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+
+main {
+  display: flex;
+  width: 90%;
+  background-color: #f4f1ec;
+  flex-direction: column;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
