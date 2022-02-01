@@ -1,0 +1,9 @@
+.new-tweet p {
+    padding: 15px;
+    background-color: #F36060;
+    color: #FFFFFF;
+    border-radius: 25px;
+    display: none;
+    text-align: center;
+    margin-top: 0px;
+}
