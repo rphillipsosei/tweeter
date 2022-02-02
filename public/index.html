@@ -19,6 +19,9 @@
     <!-- New Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!-- Tweet Timeline CSS -->
+    <link rel="stylesheet" href="/styles/tweet-timeline.css" type="text/css" />
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -45,23 +48,25 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <span id="write-tweet"><strong>Write</strong> a new tweet</id>
+      <div class="compose-tweet">
+      <span id="write-tweet"><strong>Write</strong> a new tweet</span>
       <i class="fas fa-angle-double-down"></i>
+    </div>
 
     </nav>
-    <header>
+    <header class="main-header">
 
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-          <h2>Rhoda Phillips Osei</h2>
+          <p><strong>Rhoda</strong>Phillips Osei</p>
       </div>
   </header>
   
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
       <form action="/tweets" method="POST">
@@ -74,5 +79,28 @@
       </form>
     </section>
     
+    <section class="tweet-timeline" id="tweet-container">
+      <article class="tweet">
+        <header class="tweet-header">
+          <div class="user-image">    
+          <img src="https://i.imgur.com/73hZDYK.png"></img>
+          <h3>Yoda</h3>
+          </div>
+          <p>@mr_jedi_master</p>
+        </header>
+        
+        
+        <p>Do or Do Not. There is no try. </p>
+        <footer class="footer">
+            <p>1 day ago</p>
+            <div class="social-icons">
+              <i class="fa-solid fa-flag flag"></i>
+              <i class="fa-solid fa-retweet retweet"></i>
+              <i class="fa-solid fa-heart heart"></i>
+            </div>
+        </footer>
+      </article> 
+    </section>
+  </main>
   </body>
 </html>

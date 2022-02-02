@@ -1,0 +1,56 @@
+section.tweet_history {
+    width: 100%;
+  }
+  
+  
+  .tweet {
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+    color: #545149;
+    margin-top: 50px;
+    padding: 20px;
+  }
+  
+  .tweet:hover {
+    box-shadow: 5px 5px 0 #C8C8C8;
+  }
+  
+  .tweet-header {
+      display: flex;
+      justify-content: space-between
+  }
+  
+  .user-image {
+      display: flex
+  }
+
+  .user-image img {
+    margin-right: 10px
+}
+ 
+.footer {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+#social_icons {
+    padding: .5em;
+    display: inline-block;
+}
+
+.flag:hover {
+    color: orange;
+
+}
+
+.retweet:hover {
+    color: #4056A1;
+    
+}
+
+.heart:hover {
+    color: red;
+    
+}
