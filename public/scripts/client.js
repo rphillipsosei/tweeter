@@ -5,8 +5,30 @@
  */
 
 $(document).ready(function () {
-  // Test / driver code (temporary). Eventually will get this from the server.
+ $(".tweet-submit").submit(function (event) {
+    
+    event.preventDefault();
+    const tweetLength = $("#tweet-text").val().length;
+console.log("tweetLength", tweetLength)
+    let numsLeft = 140 - tweetLength;
+    console.log("numsLeft", numsLeft)
+    if (numsLeft < 0) {
+      
+      //charCounter.addClass("tweetTooLong") 
+       alert("Tweet too long");
+    } else if (numsLeft === 140) {
+      alert("Tweet too short")
+      //charCounter.removeClass("tweetTooLong");
+    } else {
+    $.ajax("/tweets", { method: "POST" }).then(function () {
+      console.log($(this).serialize());
 
+    });
+  };
+});
+
+loadTweets()
+})
   const createTweetElement = function (tweetData) {
     const $toDynamic = `<article class="tweet">
 <header class="tweet-header">
@@ -40,24 +62,15 @@ $(document).ready(function () {
       const element = createTweetElement(tweet);
       //container.append(element);
       $("#tweets-container").append(element);
-      //console.log("container", container)
-      console.log("element", element);
     }
   };
 
-  renderTweets(tweetData);
+  //renderTweets(tweetData);
 
-  const $form = $("form");
-  $form.submit(function (event) {
-    event.preventDefault();
-    $.ajax("/tweets", { method: "POST" }).then(function () {
-      console.log($(this).serialize());
-    });
-  });
-});
+  
+  
 
 const loadTweets = function () {
   $.get("/tweets").then((data) => renderTweets(data));
-};
+}
 
-//selectors, variables, webdevsimplified
