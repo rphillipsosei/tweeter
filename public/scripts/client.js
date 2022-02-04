@@ -12,7 +12,7 @@ $(document).ready(function () {
     
     for (let tweet of tweets) {
       const element = createTweetElement(tweet);
-      $("#tweets-container").append(element);
+      $("#tweets-container").prepend(element);
     }
   };
 
@@ -40,13 +40,15 @@ $(document).ready(function () {
     return $toDynamic;
   };
 
+
   $(".tweet-submit").submit(function (event) {
     event.preventDefault();
     console.log($(this).serialize());
     const tweetLength = $("#tweet-text").val().length;
     let numsLeft = 140 - tweetLength;
     if (numsLeft < 0) {
-      alert("Tweet too long");
+      $('.new-tweet p').append("<strong>Error:</strong> We know you have a lot to say, but your tweet is too long. Please limit it to 140 characters.");
+      $("output.counter").css("color", "red")
     } else if (numsLeft === 140) {
       alert("Tweet too short");
     } else {

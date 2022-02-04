@@ -5,11 +5,7 @@ $(document).ready(function() {
    let charCounter = $(this).siblings('div').find('.counter').html(numsLeft);
  
   
-   if (numsLeft < 0) {
-     charCounter.addClass('tweetTooLong') 
-   } else if (numsLeft >= 0) {
-     charCounter.removeClass('tweetTooLong');
-    }
+ 
 
   
 

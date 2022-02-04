@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -21,16 +23,29 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-
 main {
   display: flex;
-  width: 90%;
+  width: 65%;
   background-color: #f4f1ec;
   flex-direction: column;
   margin: auto;
   padding-bottom: 40px;
+  justify-content: flex-end;
+  align-items: center;
 }
 
+.tweet-column {
+  flex-direction: column;
+  display: flex
+}
+@media only screen and (min-width: 1025px) {
+  .tweet-column {
+     flex-direction: row;
+     margin-top: 120px
+  }
+      }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ 

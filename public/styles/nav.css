@@ -2,24 +2,30 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #4056A1;
     font-family: "Bungee", cursive;
     color: #ffffff;
     z-index: 2;
     height: 120px;
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: 0; 
+    background-color: transparent;
     } 
+
+    nav span {
+        margin-left: 20px;
+        font-size: 40px
+    }
 
     .fa-angle-double-down {
         position: relative;
-        color: red
+        color: red;
+        margin-right: 15px
     }
 
     #write-tweet {
         font-family: 'Source Sans Pro', sans-serif;
-        font-size: 16px;
+        font-size: 26px;
         justify-content: flex-start
     }
 
@@ -30,4 +36,12 @@ nav {
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 16px;
         justify-content: flex-start;
+        margin-right: 20px
     }
+
+    @media only screen and (min-width: 1025px) {
+        nav {
+            background-color: #4056A1;
+            position: fixed
+        }
+            }
