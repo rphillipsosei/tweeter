@@ -9,7 +9,7 @@ $(document).ready(function () {
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
-    
+
     for (let tweet of tweets) {
       const element = createTweetElement(tweet);
       $("#tweets-container").prepend(element);
@@ -40,30 +40,29 @@ $(document).ready(function () {
     return $toDynamic;
   };
 
-
   $(".tweet-submit").submit(function (event) {
     event.preventDefault();
     console.log($(this).serialize());
     const tweetLength = $("#tweet-text").val().length;
     let numsLeft = 140 - tweetLength;
     if (numsLeft < 0) {
-      $('.new-tweet p').append("<strong>Error:</strong> We know you have a lot to say, but your tweet is too long. Please limit it to 140 characters.");
-      $("output.counter").css("color", "red")
+      $(".new-tweet p").append(
+        "<strong>Error:</strong> We know you have a lot to say, but your tweet is too long. Please limit it to 140 characters."
+      );
+      $("output.counter").css("color", "red");
     } else if (numsLeft === 140) {
       alert("Tweet too short");
     } else {
       $.ajax("/tweets", { method: "POST", data: $(this).serialize() })
-      .done(function () {
-        $("#tweets-container").empty();
-        loadTweets();
-      })
-      .fail(function (error){
-      console.log(error)
-      })
+        .done(function () {
+          $("#tweets-container").empty();
+          loadTweets();
+        })
+        .fail(function (error) {
+          console.log(error);
+        });
     }
   });
-
-
 
   const loadTweets = function () {
     $.get("/tweets").then((data) => renderTweets(data));

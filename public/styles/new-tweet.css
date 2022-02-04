@@ -1,52 +1,50 @@
-
-
 #tweets-container {
   width: 75%;
-  justify-content: flex-end
+  justify-content: flex-end;
 }
 
 button {
-    background-color: #4056a1;
-    font-family: 'Bungee', sans-serif;
-    color: #FFFFFF;
-    margin-top: 30px;
-    margin: 75px
-  }
+  background-color: #4056a1;
+  font-family: "Bungee", sans-serif;
+  color: #ffffff;
+  margin-top: 30px;
+  margin: 75px;
+}
 
-  label {
-    font-weight: bold; 
-    margin: 75px
-  }
+label {
+  font-weight: bold;
+  margin: 75px;
+}
 
-  textarea {
-    background-color:  #f4f1ec;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #000000;
-    width: 80%;
-    border-style: none;
-    border-bottom-style: solid;
-    border-width: thick;
-    margin: 75px;
-    margin-bottom: 0
-  }
+textarea {
+  background-color: #f4f1ec;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #000000;
+  width: 80%;
+  border-style: none;
+  border-bottom-style: solid;
+  border-width: thick;
+  margin: 75px;
+  margin-bottom: 0;
+}
 
-  output.counter {
-    font-family: 'Bungee', sans-serif;
-    color: #000000;
-    /* padding-top: 30px; */
-    float: right;
-    margin: 75px
-  }
+output.counter {
+  font-family: "Bungee", sans-serif;
+  color: #000000;
+  /* padding-top: 30px; */
+  float: right;
+  margin: 75px;
+}
 
-  h2 {
-    margin: 75px
-  }
+h2 {
+  margin: 75px;
+}
 
-  form.tweet-submit {
-    padding-top: 170px
-  }
+form.tweet-submit {
+  padding-top: 170px;
+}
 
-  .new-tweet p {
-    color: red;
-    padding-top: 80px
-  }
+.new-tweet p {
+  color: red;
+  padding-top: 80px;
+}

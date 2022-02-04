@@ -1,26 +1,26 @@
 .main-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #DFB028;
-    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
-    width: 100vw;
-    height: auto;
-    position: relative;
-    flex-direction: column;
-    padding-top: 120px
-    } 
-    
-    @media only screen and (min-width: 1025px) {
-.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dfb028;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  width: 100vw;
+  height: auto;
+  position: relative;
+  flex-direction: column;
+  padding-top: 120px;
+}
+
+@media only screen and (min-width: 1025px) {
+  .main-header {
     width: 25vw;
     height: 400px;
     margin-top: 170px;
     margin-left: 50px;
-    padding-top: 0
+    padding-top: 0;
+  }
 }
-    }
 
-    .main-header p {
-       font-size: 30px 
-    }
+.main-header p {
+  font-size: 30px;
+}
