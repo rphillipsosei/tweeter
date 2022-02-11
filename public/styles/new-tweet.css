@@ -28,10 +28,10 @@ textarea {
   margin-bottom: 0;
 }
 
+
 output.counter {
   font-family: "Bungee", sans-serif;
   color: #000000;
-  /* padding-top: 30px; */
   float: right;
   margin: 75px;
 }

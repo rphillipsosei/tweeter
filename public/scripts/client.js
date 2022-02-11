@@ -40,6 +40,7 @@ $(document).ready(function () {
     return $toDynamic;
   };
 
+
   $(".tweet-submit").submit(function (event) {
     event.preventDefault();
     console.log($(this).serialize());
@@ -47,11 +48,13 @@ $(document).ready(function () {
     let numsLeft = 140 - tweetLength;
     if (numsLeft < 0) {
       $(".new-tweet p").append(
-        "<strong>Error:</strong> We know you have a lot to say, but your tweet is too long. Please limit it to 140 characters."
+        "<strong>Error:</strong> Sorry, please enter between 1 and 140 characters."
       );
       $("output.counter").css("color", "red");
     } else if (numsLeft === 140) {
-      alert("Tweet too short");
+      $(".new-tweet p").append(
+        "<strong>Error:</strong> Sorry, please enter between 1 and 140 characters."
+      );
     } else {
       $.ajax("/tweets", { method: "POST", data: $(this).serialize() })
         .done(function () {
@@ -70,3 +73,21 @@ $(document).ready(function () {
 
   loadTweets();
 });
+//   $(".tweet-submit").submit(function (event) {
+//     event.preventDefault();
+//     console.log($(this).serialize());
+//    // const tweetLength = $("#tweet-text").val().length;
+    
+
+//   const loadTweets = function () {
+//     $.get("/tweets").then((data) => renderTweets(data));
+//   };
+
+//   loadTweets();
+// })
+// });
+
+/*
+character counter to red// jquery event listener, append ccs to textbox (keyup, keydown, input)
+reset form after submit//jquery, form reset
+wrap text*/
