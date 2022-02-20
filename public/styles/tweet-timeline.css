@@ -20,6 +20,10 @@ section.tweet_history {
   justify-content: space-between;
 }
 
+.tweet-body {
+  word-wrap: break-word
+}
+
 .user-image {
   display: flex;
 }

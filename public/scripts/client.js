@@ -27,7 +27,9 @@ $(document).ready(function () {
 </header>
 
 
+<div class="tweet-body">
 <p>${tweetData.content.text} </p>
+</div>
 <footer class="footer">
     <p>${timeago.format(tweetData.created_at)}</p>
     <div class="social-icons">
@@ -44,20 +46,30 @@ $(document).ready(function () {
     event.preventDefault();
     console.log($(this).serialize());
     const tweetLength = $("#tweet-text").val().length;
+    const errorLength = $(".new-tweet p").val().length
     //count of how many characters of the 140 limit are remaining to be used up
     let numsLeft = 140 - tweetLength;
     //notification that appears if tweet length surpasses limit of 140
+    
     if (numsLeft < 0) {
-      $(".new-tweet p").append(
-        "<strong>Error:</strong> Sorry, please enter between 1 and 140 characters."
+      
+      //if an error message does not exist while there are no characters left, print an error
+      if(errorLength === 0) {
+           $(".new-tweet p").text(
+        "Error: Please enter between 1 and 140 characters."
       );
+      
       //change of colour of the character counter if user surprasses limit of 140 characters
-      $("output.counter").css("color", "red");
+      $("output.counter").css("color", "red");}
       //nofitication that appears if user does not tweet anything
+
     } else if (numsLeft === 140) {
-      $(".new-tweet p").append(
-        "<strong>Error:</strong> Sorry, please enter between 1 and 140 characters."
+        //if an error message does not exist while the text field is empty, print an error
+      if(errorLength === 0){
+      $(".new-tweet p").text(
+        "Error: Please enter between 1 and 140 characters."
       );
+      }
     } else {
       //if there are no issues with tweet length, push input to the timeline and reset the text tweet field
       $.ajax("/tweets", { method: "POST", data: $(this).serialize() })
@@ -69,6 +81,7 @@ $(document).ready(function () {
         .fail(function (error) {
           console.log(error);
         });
+
     }
   });
 
