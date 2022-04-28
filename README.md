@@ -24,6 +24,6 @@ Tweeter is a simple, single-page Twitter clone.
 
 !["Screenshot of newly submitted tweet"](https://github.com/rphillipsosei/tweeter/blob/master/public/images/for-readme/new-tweet.png)
 
-!["Screenshot of error messages if tweet exceeds 140 characters"](https://github.com/rphillipsosei/tweeter/blob/master/public/images/for-readme/failed-tweet.png)
+<!-- !["Screenshot of error messages if tweet exceeds 140 characters"](https://github.com/rphillipsosei/tweeter/blob/master/public/images/for-readme/failed-tweet.png) -->
 
 !["Screenshot of Tweeter site adapted for mobile devices"](https://github.com/rphillipsosei/tweeter/blob/master/public/images/for-readme/responsive-design.png)
