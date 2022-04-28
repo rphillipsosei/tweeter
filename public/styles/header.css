@@ -8,7 +8,8 @@
   height: auto;
   position: relative;
   flex-direction: column;
-  padding-top: 120px;
+  padding-top: 10rem;
+ 
 }
 
 @media only screen and (min-width: 1025px) {

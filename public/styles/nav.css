@@ -20,7 +20,8 @@ nav span {
 .fa-angle-double-down {
   position: relative;
   color: red;
-  margin-right: 15px;
+  margin-left: 5.5rem;
+  margin-top: 0.5rem
 }
 
 #write-tweet {

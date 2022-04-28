@@ -8,8 +8,8 @@ button {
   background-color: #4056a1;
   font-family: "Bungee", sans-serif;
   color: #ffffff;
-  margin-top: 30px;
-  margin: 75px;
+  margin-top: 1rem;
+  margin-left: 3rem
 }
 
 label {
@@ -21,21 +21,22 @@ textarea {
   background-color: #f4f1ec;
   font-family: "Source Sans Pro", sans-serif;
   color: #000000;
-  width: 100%;
+  width: 95%;
   border-style: none;
   border-bottom-style: solid;
   border-width: thick;
   margin: 50px;
   margin-bottom: 0px;
-  justify-content: flex-start
+  justify-content: flex-start;
+  margin-left: 2.5rem;
 }
 
 output.counter {
   font-family: "Bungee", sans-serif;
   color: #000000;
   float: right;
-  margin: 75px;
-  margin-right: 0px;
+  margin-right:-0.5rem;
+  margin-top: 1rem;
 }
 
 h2 {
@@ -44,9 +45,26 @@ h2 {
 
 form.tweet-submit {
   padding-top: 170px;
+  
 }
 
 .new-tweet p {
   color: red;
-  padding-top: 80px;
+  margin-top: 80px;
+  margin-bottom: -12rem;
+  margin-left: 2rem
+}
+
+#compose-tweet {
+  margin-left: 2rem;
+  font-size: 40px;
+  margin-bottom: -1rem;
+}
+
+.create-tweet {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 93%;
+  margin-right: 25rem
 }
